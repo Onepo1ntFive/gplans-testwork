@@ -1,0 +1,135 @@
+.b-table {
+    margin-bottom: 10rem;
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 00;
+        width: 100%;
+    }
+    
+    i {
+        font-size: 1.6rem;
+        
+        @media (min-width: $breakpoint-tablet) {
+            font-size: 2.2rem;
+        }
+        
+        &::before {
+            font-weight: 900;
+        }
+        &.fa-check::before {
+            color: $color-blue2;
+        }
+        &.fa-times::before {
+            color: $color-brown;
+        }
+    }
+    tr {
+        th,
+        td {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid $color-light-brown;
+        }
+        th {
+            text-align: left;
+            font-size: 1.6rem;
+            font-weight: bold;
+            
+            @media (min-width: $breakpoint-tablet) {
+                font-size: 2.2rem;
+            }
+            
+            a {
+                display: block;
+                font-size: 1.4rem;
+                font-weight: normal;
+                color: $color-blue2;
+            }
+        }
+        td {
+            width: 6rem;
+            position: relative;
+            vertical-align: middle;
+            text-align: center;
+            
+            @media (min-width: $breakpoint-tablet) {
+                font-size: inherit;
+                width: 15rem;
+            }
+            
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0.7rem;
+                right: 0.7rem;
+                z-index: -1;
+                top: 0;
+                bottom: 0;
+                background-color: $color-light-brown2;
+                display: block;
+            }
+        }
+
+        &:last-child {
+            th,
+            td {
+                border-bottom: 0;
+            }
+        }
+        &:first-child {
+            th,
+            td {
+                font-size: 1.2rem;
+                @media (min-width: $breakpoint-tablet) {
+                    font-size: inherit;
+                }
+            }
+        }
+    }
+    .table__g {
+        color: $color-blue2;
+        font-weight: 900;
+        font-size: 3rem;
+    
+        ins {
+            font-size: 0.5em;
+            text-decoration: none;
+        }
+    }
+    .table__price {
+        text-align: center;
+        vertical-align: top;
+
+        ins {
+            padding-bottom: 0.5rem;
+            display: block;
+            text-decoration: none;
+            font-size: 1.6rem;
+        }
+        span {
+            display: block;
+            font-weight: 900;
+            font-size: 1.6rem;
+            
+            @media (min-width: $breakpoint-tablet) {
+                font-size: 2.2rem;
+                display: inline-block;
+            }
+
+            &.table__price-old {
+                font-weight: normal;
+                text-decoration: line-through;
+                color: $color-brown;
+                
+                @media (min-width: $breakpoint-tablet) {
+                    padding-right: 1rem;
+                }
+            }
+            &.table__price-new {
+                color: $color-green;
+            }
+        }
+    }
+}

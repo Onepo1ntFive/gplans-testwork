@@ -1,0 +1,26 @@
+.b-menu {
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+    li {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        
+        @media (min-width: $breakpoint-desktop) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+    a {
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: $color-black;
+        transition: color 0.2s ease-in-out;
+    }
+    a:hover {
+        text-decoration: none;
+        color: $color-blue2;
+    }
+}
